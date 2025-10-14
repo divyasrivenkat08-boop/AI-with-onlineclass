@@ -25,15 +25,6 @@ if "teacher" not in st.session_state:
     st.session_state.teacher = None
 
 
-# ---- HIDE Streamlit deploy/share buttons & footer ----
-hide_streamlit_style = """
-    <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        .stDeployButton {display: none !important;}
-        .stAppDeployButton {display: none !important;}
-    </style>
-"""
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 genai.configure(api_key=os.getenv("AIzaSyCfrfvfbxBStXWTYksHDmGlrAcE0VpBC1o"))
@@ -261,3 +252,4 @@ elif menu == "Teacher":
     st.session_state.student_name = ""
 
     st.success("🆕 New class started! Previous class data archived safely.")
+
