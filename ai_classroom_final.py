@@ -259,4 +259,5 @@ elif menu == "Teacher":
     st.session_state.broadcasts = []
     st.session_state.attendance_marked = False
     st.session_state.student_name = ""
+
     st.success("🆕 New class started! Previous class data archived safely.")
