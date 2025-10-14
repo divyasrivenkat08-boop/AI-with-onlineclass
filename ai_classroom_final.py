@@ -2,7 +2,6 @@ import io
 import streamlit as st
 import pandas as pd
 import google.generativeai as genai
-import bcrypt
 import os
 from datetime import datetime
 from docx import Document
