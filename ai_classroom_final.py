@@ -24,9 +24,6 @@ if "broadcast" not in st.session_state:
 if "teacher" not in st.session_state:
     st.session_state.teacher = None
 
-
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-
 genai.configure(api_key=os.getenv("AIzaSyCfrfvfbxBStXWTYksHDmGlrAcE0VpBC1o"))
 model = genai.GenerativeModel("gemini-1.5-flash")
 
@@ -252,4 +249,5 @@ elif menu == "Teacher":
     st.session_state.student_name = ""
 
     st.success("🆕 New class started! Previous class data archived safely.")
+
 
